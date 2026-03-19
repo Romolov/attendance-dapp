@@ -1,0 +1,22 @@
+# Tout ignorer par défaut
+*
+
+# Autoriser les fichiers du projet
+!.gitignore
+!README.md
+!package.json
+!index.html
+!app.js
+!style.css
+!logo-imt.png
+!contracts/
+!contracts/AttendanceSystem.sol
+!scripts/
+!scripts/compile.js
+!scripts/deploy.js
+!scripts/start.js
+!presentation/
+!presentation/presentation.md
+!presentation/presentation.pdf
+!presentation/logo-imt.png
+!presentation/webui1.png

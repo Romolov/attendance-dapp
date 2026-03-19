@@ -1,0 +1,51 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Helvetica, Arial, sans-serif; background: #f0f2f5; color: #222; }
+
+header { background: #00B8DE; color: white; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+header h1 { font-size: 1.15rem; }
+#infoCompte { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; }
+#infoCompte span { white-space: nowrap; }
+
+button { background: #00B8DE; color: white; border: none; padding: 7px 14px; cursor: pointer; font-size: 0.88rem; }
+button:hover { background: #009bb8; }
+button.danger { background: #c53030; }
+button.danger:hover { background: #9b2c2c; }
+button.secondary { background: #3c3c3c; }
+button.secondary:hover { background: #222; }
+
+.section { background: white; border: 1px solid #ddd; margin: 14px auto; padding: 20px; max-width: 920px; }
+h2 { font-size: 1.05rem; margin-bottom: 14px; border-bottom: 2px solid #00B8DE; padding-bottom: 5px; }
+h3 { font-size: 0.95rem; margin: 14px 0 8px; color: #009bb8; }
+
+form { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 8px; }
+input[type="text"], input[type="number"], select { padding: 6px 9px; border: 1px solid #bbb; font-size: 0.88rem; min-width: 180px; }
+input[type="number"] { min-width: 60px; width: 70px; }
+.input-group { display: flex; flex-direction: column; gap: 2px; }
+.input-group label { font-size: 0.75rem; color: #555; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.86rem; }
+th { background: #e0f6fb; padding: 7px 8px; text-align: left; }
+td { padding: 6px 8px; border-bottom: 1px solid #eee; }
+
+.msg-ok  { color: green;   margin-top: 6px; font-size: 0.86rem; }
+.msg-err { color: #c53030; margin-top: 6px; font-size: 0.86rem; }
+
+.ouvert   { color: green;   font-weight: bold; }
+.expire   { color: #b7791f; font-weight: bold; }
+.ferme    { color: #718096; }
+.present  { color: green; }
+.invalide { color: #c53030; }
+.absent   { color: #718096; }
+.justifie { color: #00B8DE; font-weight: bold; }
+.attente  { color: #b7791f; font-style: italic; }
+.encours  { color: #00B8DE; font-style: italic; }
+.retard   { color: #dd6b20; font-weight: bold; }
+
+#accueil { text-align: center; padding: 50px 20px; max-width: 500px; margin: 60px auto; background: white; border: 1px solid #ddd; }
+#accueil p { margin-top: 12px; color: #555; }
+
+.hidden { display: none; }
+#spanRole { font-weight: bold; }
+#infoEtudiant { margin-bottom: 12px; font-size: 0.88rem; color: #555; }
+#tblSessionsOuvertes { margin-bottom: 14px; }
+.banner-pause { background: #c53030; color: white; text-align: center; padding: 10px; font-weight: bold; font-size: 0.9rem; }
