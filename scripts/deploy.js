@@ -1,4 +1,4 @@
-// Déploie AttendanceSystem sur Ganache local et écrit l'adresse dans contract-address.json
+// deploy sur Ganache local
 const Web3 = require('web3');
 const fs   = require('fs');
 const path = require('path');
@@ -8,7 +8,6 @@ const COMPILED         = path.join(__dirname, 'compiled.json');
 const CONTRACT_ADDRESS = path.join(__dirname, '../contract-address.json');
 
 // Compte déployeur = compte[0] de Ganache (dérivé du mnemonic fixe)
-// mnemonic: "link gate remind scout swim concert labor organ arena ripple net notable"
 const DEPLOYER = '0x63e55069cf4e3b326152721ba3d42bdbb7774bc5';
 
 async function deploy() {
