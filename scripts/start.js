@@ -1,4 +1,4 @@
-// Lance Ganache, compile, déploie, seed, puis sert le frontend sur http://localhost:8080
+// dev startup script
 process.setMaxListeners(0);
 const { execSync, spawn } = require('child_process');
 const http   = require('http');
