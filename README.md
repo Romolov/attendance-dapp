@@ -1,13 +1,13 @@
 # Système de Présence Blockchain
 
-DApp Ethereum de vérification de présence inspirée de SoWeSign. Projet universitaire — Solidity + Web3.js + MetaMask. Développement local via Ganache, compatible avec tout réseau EVM.
+DApp Ethereum de vérification de présence inspirée de SoWeSign. Projet avec Solidity + Web3.js + MetaMask. Développement local via Ganache, compatible avec tout réseau EVM.
 
 ---
 
 ## Prérequis
 
-- **Node.js** + **npm** — `sudo pacman -S nodejs npm` (Arch Linux)
-- **MetaMask** — extension navigateur (Firefox ou Chromium)
+- **Node.js** + **npm** - `sudo pacman -S nodejs npm` (Arch Linux)
+- **MetaMask** - extension navigateur (Firefox ou Chromium)
 
 ```bash
 npm install
@@ -23,7 +23,7 @@ npm install
 npm start
 ```
 
-Lance automatiquement : Ganache → compilation → déploiement → seed (2 profs, 2 classes, 3 étudiants) → serveur sur **http://localhost:8080**.
+Lance automatiquement : Ganache, compilation, déploiement, seed (2 profs, 2 classes, 3 étudiants), serveur sur **http://localhost:8080**.
 
 `Ctrl+C` arrête tout.
 
@@ -42,7 +42,7 @@ Dans MetaMask → Réseaux → Ajouter un réseau manuellement :
 
 **Importer les comptes :**
 
-Dans MetaMask → Importer un wallet → entrer le mnemonic :
+Dans MetaMask : Importer un wallet; entrer le mnemonic :
 ```
 link gate remind scout swim concert labor organ arena ripple net notable
 ```
@@ -77,49 +77,6 @@ Puis renommer les 6 premiers comptes :
 
 ---
 
-## Structure du projet
-
-```
-attendance-dapp/
-├── contracts/
-│   └── AttendanceSystem.sol        # Smart contract Solidity
-├── scripts/
-│   ├── compile.js                  # Compile .sol → compiled.json
-│   ├── deploy.js                   # Déploie sur Ganache + écrit contract-address.json
-│   ├── start.js                    # Lance Ganache + compile + déploie + seed + serveur
-│   └── compiled.json               # (généré, gitignored)
-├── presentation/
-│   ├── presentation.md             # Source Beamer (Markdown)
-│   ├── presentation.pdf            # Diapo compilée
-│   ├── logo-imt.png                # Logo IMT Nord Europe
-│   └── webui1.png                  # Screenshot de la DApp
-├── index.html                      # Frontend — structure HTML
-├── style.css                       # Frontend — styles (charte IMT Nord Europe)
-├── app.js                          # Frontend — logique JavaScript
-├── logo-imt.png                    # Logo IMT (header du site)
-├── contract-address.json           # (généré, gitignored)
-├── package.json
-└── README.md
-```
-
----
-
-## Architecture
-
-```
-Navigateur (HTML/CSS/JS)
-        │
-     Web3.js (CDN)
-        │
-     MetaMask
-        │
-  Réseau Ethereum (Ganache en dev)
-        │
-  AttendanceSystem.sol
-```
-
----
-
 ## Rôles
 
 | Rôle | Accès |
@@ -138,7 +95,7 @@ Le rôle est détecté automatiquement à la connexion MetaMask selon l'adresse 
 
 ### Fonctions principales
 
-Le contrat expose une vingtaine de fonctions couvrant : gestion des profs et des classes, inscription/désinscription des étudiants, ouverture/fermeture/réouverture de sessions, signature de présence (avec vérification du code secret haché), gestion des retards, justifications d'absence, transfert de classe, notes de session, et pause d'urgence. Le détail est dans le code source (`contracts/AttendanceSystem.sol`).
+Le contrat permet : gestion des profs et des classes, inscription/désinscription des étudiants, ouverture/fermeture/réouverture de sessions, signature de présence (avec vérification du code secret haché), gestion des retards, justifications d'absence, transfert de classe, notes de session, et pause d'urgence.
 
 ### Mécanisme de présence
 
