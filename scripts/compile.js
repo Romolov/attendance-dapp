@@ -1,4 +1,4 @@
-// Compile AttendanceSystem.sol avec solc et écrit le résultat dans scripts/compiled.json
+// compile.js - solc wrapper
 const solc = require('solc');
 const fs   = require('fs');
 const path = require('path');
